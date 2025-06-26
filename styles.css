@@ -3,4 +3,67 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px repeat(3, 300px);
+  grid-template-areas:
+    "header header header header"
+    "navbar main-content main-content main-content"
+    "navbar content-1 content-2 content-3"
+    "navbar footer footer footer";
+}
+
+header,
+nav,
+section {
+  padding: 20px;
+}
+
+header {
+  background-color: lightblue;
+  grid-area: header;
+}
+
+nav {
+  background-color: lightgreen;
+  grid-area: navbar;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+li a {
+  color: black;
+}
+
+.section-content-main {
+  background-color: lightsalmon;
+  grid-area: main-content;
+}
+
+.section-content-1 {
+  background-color: lightskyblue;
+  grid-area: content-1;
+}
+
+.section-content-2 {
+  background-color: lightslategray;
+  grid-area: content-2;
+}
+
+.section-content-3 {
+  background-color: lightcyan;
+  grid-area: content-3;
+}
+
+footer {
+  background-color: lightblue;
+  grid-area: footer;
 }
